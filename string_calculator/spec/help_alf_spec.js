@@ -1,9 +1,11 @@
 describe('String Calculator', function() {
 	beforeEach(function() {
-		calculator = new StringCalculator();
+		help_alf = new StringCalculator();
 	});
 
-	it('should return 0 for an empty string', function() {
-		expect(calculator.add('')).toEqual(0);
+	it('should return "Spaceship lost forever" if ship could not be found', function() {
+		let map = "..........\n..........\n..........\n..........\n..........\n..........";
+		expect(help_alf.find_ship(map)).toEqual("Spaceship lost forever");
 	});
+
 });
