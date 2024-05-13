@@ -13,4 +13,9 @@ describe('String Calculator', function() {
 		expect(help_alf.find_ship(map)).toEqual("0,0");
 	});
 
+	it('should return "4,3" if ship is at coordinates: 4,3', function() {
+		let map = "..........\n..........\n....X.....\n..........\n..........\n..........";
+		expect(help_alf.find_ship(map)).toEqual("4,3");
+	});
+
 });
