@@ -6,7 +6,7 @@ help_alf_function.prototype.find_ship = function(map) {
 	let x_coordinate = null
 	let y_coordinate = null
 
-	let position_y = 5
+	let position_y = lines.length - 1 
 	for (let line of lines){
 		let position_x = 0
 		for (let char of line){
