@@ -23,5 +23,8 @@ describe('String Calculator', function() {
 		expect(help_alf.find_ship(map)).toEqual("7,3");
 	});
 
-	
+	it('should return "Can not identify ship" if to many ships are on radar', function() {
+		let map = "..........\n..........\n....X.....\n..........\n........X.\n.........."
+		expect(help_alf.find_ship(map)).toEqual("Can not identify ship");
+	});
 });
