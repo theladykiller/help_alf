@@ -11,10 +11,14 @@ help_alf_function.prototype.find_ship = function(map) {
 		let position_x = 0
 		for (let char of line){
 			if (char == "X"){
-				x_coordinate = position_x
-				y_coordinate = position_y
-				result = x_coordinate + "," + y_coordinate
-				break;
+				if(!result){
+					x_coordinate = position_x
+					y_coordinate = position_y
+					result = x_coordinate + "," + y_coordinate
+					break;
+				}else{
+					result = "Can not identify ship"
+				}
 			}
 			position_x++
 		}
