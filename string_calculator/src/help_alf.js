@@ -1,25 +1,27 @@
 function help_alf_function() {}
 help_alf_function.prototype.find_ship = function(map) {
+	let result
 	let lines = map.split("\n")
 	
-	let fixed_x = null
-	let fixed_y = null
+	let x_coordinate = null
+	let y_coordinate = null
+
 	let position_y = 5
 	for (let line of lines){
 		let position_x = 0
 		for (let char of line){
 			if (char == "X"){
-				fixed_x = position_x
-				fixed_y = position_y
+				x_coordinate = position_x
+				y_coordinate = position_y
+				result = x_coordinate + "," + y_coordinate
+				break;
 			}
 			position_x++
 		}
 		position_y--
 	}
+	if(!result)
+		result = "Spaceship lost forever"
 
-	if(fixed_y == null || fixed_x == null)
-		return "Spaceship lost forever"
-	else
-		return fixed_x + "," + fixed_y
-
+	return result
 };

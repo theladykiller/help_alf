@@ -17,5 +17,4 @@ describe('String Calculator', function() {
 		let map = "..........\n..........\n....X.....\n..........\n..........\n..........";
 		expect(help_alf.find_ship(map)).toEqual("4,3");
 	});
-
 });
